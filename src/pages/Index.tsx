@@ -1,5 +1,4 @@
 import { useState, useCallback } from "react";
-import { Dumbbell } from "lucide-react";
 import { WORKOUT_PLAN } from "@/data/workoutPlan";
 import { Day, Exercise, SetConfig } from "@/types/workout";
 import { useWorkoutLogs } from "@/hooks/useWorkoutLogs";
@@ -11,6 +10,7 @@ import { RestTimer } from "@/components/workout/RestTimer";
 import { ExerciseCard } from "@/components/workout/ExerciseCard";
 import { WorkoutComplete } from "@/components/workout/WorkoutComplete";
 import { toast } from "sonner";
+import logo from "@/assets/logo.png";
 
 const Index = () => {
   const [selectedDayId, setSelectedDayId] = useState<string | null>(null);
@@ -92,9 +92,11 @@ const Index = () => {
       <header className="sticky top-0 z-40 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="container py-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg gradient-primary">
-              <Dumbbell className="w-6 h-6 text-primary-foreground" />
-            </div>
+            <img 
+              src={logo} 
+              alt="GabiFIT Logo" 
+              className="w-12 h-12 rounded-lg object-cover"
+            />
             <div>
               <h1 className="text-2xl font-display tracking-wide text-foreground">
                 {WORKOUT_PLAN.name}
