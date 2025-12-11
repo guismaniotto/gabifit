@@ -53,23 +53,23 @@ export function RestTimer({
 
             <div className="flex items-center gap-1">
               <Button
-                onClick={() => onAddTime(-15)}
+                onClick={() => onAddTime(-30)}
                 variant="ghost"
                 size="sm"
                 className="text-primary-foreground hover:bg-primary-foreground/20 px-2"
-                disabled={remaining <= 15}
+                disabled={remaining <= 30}
               >
                 <Minus className="w-4 h-4" />
-                15s
+                30s
               </Button>
               <Button
-                onClick={() => onAddTime(15)}
+                onClick={() => onAddTime(30)}
                 variant="ghost"
                 size="sm"
                 className="text-primary-foreground hover:bg-primary-foreground/20 px-2"
               >
                 <Plus className="w-4 h-4" />
-                15s
+                30s
               </Button>
               <Button
                 onClick={onSkip}
