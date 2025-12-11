@@ -12,7 +12,7 @@ const generateSets = (count: number, minReps: number, maxReps: number, rpe: numb
 
 export const WORKOUT_PLAN: WorkoutPlan = {
   id: "ppl",
-  name: "Push Pull Legs",
+  name: "GabiFIT",
   days: [
     {
       id: "day1",
